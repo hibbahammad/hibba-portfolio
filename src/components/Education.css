@@ -1,0 +1,48 @@
+.education-card {
+  margin-top: 36px;
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  max-width: 640px;
+  transition: box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.education-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.education-institute {
+  color: var(--color-ink-muted);
+  margin-bottom: 10px;
+}
+
+.education-meta {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-primary-dark);
+}
+
+.education-dot { color: var(--color-border); }

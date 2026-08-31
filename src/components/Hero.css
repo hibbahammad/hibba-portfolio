@@ -1,0 +1,132 @@
+.hero {
+  padding: 90px 0 60px;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin: 14px 0 6px;
+}
+
+.hero-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 18px;
+}
+
+.hero-divider {
+  color: var(--color-border);
+  margin: 0 6px;
+}
+
+.hero-summary {
+  color: var(--color-ink-muted);
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 18px;
+  color: var(--color-ink-muted);
+}
+
+.hero-socials a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-socials a:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Code panel signature element */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.code-panel {
+  width: 100%;
+  max-width: 440px;
+  background: #10131f;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transform: rotate(-1.5deg);
+}
+
+.code-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: #191d2c;
+  border-bottom: 1px solid #2a2f42;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot-red { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green { background: #28c840; }
+
+.code-panel-name {
+  margin-left: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #8b90a8;
+}
+
+.code-panel-body {
+  padding: 22px 20px 28px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: #c7cbe0;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.tok-key { color: #7aa2ff; }
+.tok-var { color: #ffd580; }
+.tok-prop { color: #9ece6a; }
+.tok-str { color: #f7c774; }
+.tok-bool { color: #ff7aa2; }
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .hero-visual { margin-top: 20px; }
+  .code-panel { transform: none; max-width: 100%; }
+}
