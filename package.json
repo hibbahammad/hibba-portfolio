@@ -1,7 +1,8 @@
 {
-  "name": "hibba-portfilo",
+  "name": "hibba-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Hibba Hammad's portfolio website built with React and Vite.",
   "type": "module",
   "scripts": {
     "dev": "vite",

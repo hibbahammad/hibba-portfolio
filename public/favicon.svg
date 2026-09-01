@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Hibba Hammad portfolio favicon">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a47e0"/>
+      <stop offset="100%" stop-color="#2f6fed"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#f6f8fc"/>
+  <path d="M26 26h20v76H26zm26 0h20v76H52zm20 32h30v20H72z" fill="url(#g)"/>
+  <path d="M26 26h20v20H26zm52 0h20v20H78zm0 62h20v20H78z" fill="#10131f" opacity="0.12"/>
+</svg>

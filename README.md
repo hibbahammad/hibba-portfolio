@@ -1,115 +1,120 @@
-# 👋 Hi, I'm Hibba Hammad
+# Hibba Hammad — Portfolio
 
-### Frontend Developer | React | JavaScript | Full-Stack Development & AI Enthusiast
+A professional portfolio website built to showcase my work as a Full-Stack Developer with a focus on modern web development, AI-powered tools, and automation.
 
-I’m a Computer Science graduate focused on building modern, responsive, and user-friendly web experiences.
+## About
 
-I enjoy turning ideas into clean and functional interfaces while continuously improving my skills in React, JavaScript, full-stack development, and AI technologies.
+I am Hibba Hammad, a Computer Science graduate building responsive digital experiences with React, JavaScript, HTML, CSS, and modern backend technologies. My portfolio highlights projects, skills, learning milestones, and contact information in a clean and professional format.
 
----
+## Purpose
 
-## 📌 About the Project
+This project serves as a personal portfolio to present:
 
-This repository contains my personal developer portfolio, created to showcase my skills, projects, and development journey.
+- web development experience
+- AI and automation interests
+- project work and design thinking
+- skills across frontend and backend development
+- contact information for collaboration and opportunities
 
-## ✨ Highlights
+## Technologies Used
 
-* 📱 Responsive design
-* 🎨 Modern and clean user interface
-* 👩‍💻 About Me section
-* 🛠️ Skills and technologies section
-* 🚀 Projects showcase
-* 📩 Contact section
-* 🔗 Professional social links
+- React
+- Vite
+- JavaScript
+- CSS
+- HTML
+- GitHub
+- Netlify
 
-## 🛠️ Tech Stack
+## Main Features
 
-* **HTML5**
-* **CSS3**
-* **JavaScript**
-* **React**
-* **Vite**
-* **Git & GitHub**
+- responsive portfolio layout
+- modern navigation and hero section
+- about, skills, projects, education, and contact sections
+- project filtering for different work categories
+- clean visual design with professional branding
+- contact links for email, GitHub, LinkedIn, and WhatsApp
 
-## 📸 Screenshots
+## Responsive Design
 
-### 🏠 Home
+The site is designed to work smoothly across desktop, tablet, and mobile screens while maintaining a polished and readable layout.
 
-![Portfolio Home](./public/screenshot/home.png)
+## Projects Section
 
-### 👩‍💻 About
+The portfolio includes a curated set of project cards covering:
 
-![About](./public/screenshot/aboutus.png)
+- AI-assisted builds
+- hand-coded front-end work
+- modern web application concepts
 
-### 🛠️ Skills
+## Screenshot Gallery
 
-![Skills](./public/screenshot/skills.png)
+### Home
+![Portfolio home](./public/screenshot/home.png)
 
-### 📩 Contact
+### About
+![About section](./public/screenshot/aboutus.png)
 
-![Contact](./public/screenshot/contact.png)
+### Skills
+![Skills section](./public/screenshot/skills.png)
 
-## 🚀 Live Demo
+### Contact
+![Contact section](./public/screenshot/contact.png)
 
-🌐 **[Visit My Live Portfolio](https://hibba-portfolio.netlify.app/)**
+## Local Development
 
-## 💻 Run Locally
-
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/hibbahammad/hibba-portfolio.git
-```
-
-### 2. Navigate to the project
-
-```bash
 cd hibba-portfolio
 ```
 
-### 3. Install dependencies
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Start the development server
+### Start the app locally
 
 ```bash
 npm run dev
 ```
 
-Open the local URL provided by Vite.
+### Build for production
 
-## 🎯 Project Goals
+```bash
+npm run build
+```
 
-* Build a professional developer portfolio
-* Practice React and modern frontend development
-* Create responsive user interfaces
-* Showcase practical development projects
-* Build a foundation for full-stack development
+### Preview the production build
 
-## 🔮 Future Improvements
+```bash
+npm run preview
+```
 
-* Add more full-stack projects
-* Improve accessibility
-* Add detailed project case studies
-* Continue improving responsive design
-* Expand the portfolio with new technologies
+## Deployment
 
-## 🤝 Connect With Me
+This project is set up for deployment on Netlify and uses a Vite production build.
 
-📧 **Email:** [hibbahammad070@gmail.com](mailto:hibbahammad070@gmail.com)
+Recommended build command:
 
-💼 **LinkedIn:**
-https://www.linkedin.com/in/hibba-hammad-0b4b643a2/
+```bash
+npm run build
+```
 
-🐙 **GitHub:**
-https://github.com/hibbahammad
+## GitHub
 
-🌐 **Portfolio:**
-https://hibba-portfolio.netlify.app/
+- GitHub profile: https://github.com/hibbahammad
+- Repository: https://github.com/hibbahammad/hibba-portfolio
 
----
+## Contact
 
-⭐ **Thanks for visiting my portfolio repository!**
+- Email: hibbahammad070@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hibba-hammad-0b4b643a2/
+- GitHub: https://github.com/hibbahammad
+
+## License
+
+This project is for personal portfolio use and is not intended for resale or redistribution.
