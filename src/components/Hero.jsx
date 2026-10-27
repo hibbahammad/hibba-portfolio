@@ -8,15 +8,13 @@ function Hero() {
     <section id="home" className="hero">
       <div className="container hero-inner">
         <div className="hero-content">
-          <span className="hero-eyebrow">{siteConfig.location}</span>
-          <h1 className="hero-title">{siteConfig.name}</h1>
+          <span className="hero-eyebrow">Available for thoughtful builds · {siteConfig.location}</span>
+          <h1 className="hero-title">Hi, I&apos;m <span>Hibba.</span><br />I build for the <em>web.</em></h1>
           <p className="hero-role">
             {siteConfig.role} · {siteConfig.focus}
           </p>
           <p className="hero-summary">
-            Building responsive web applications with React and Node.js,
-            while exploring AI-powered tools, chatbots, and automation to
-            create smarter digital experiences.
+            {siteConfig.summary}
           </p>
 
           <div className="hero-actions">
@@ -26,28 +24,33 @@ function Hero() {
             <a href="#contact" className="btn btn-secondary">
               Contact Me
             </a>
+            <a href={siteConfig.github} target="_blank" rel="noreferrer" className="btn btn-quiet">
+              <FaGithub /> GitHub
+            </a>
           </div>
 
           <div className="hero-socials">
             {siteConfig.linkedin ? (
-              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer">
+              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FaLinkedin size={20} />
               </a>
             ) : null}
 
             {siteConfig.github ? (
-              <a href={siteConfig.github} target="_blank" rel="noreferrer">
+              <a href={siteConfig.github} target="_blank" rel="noreferrer" aria-label="GitHub">
                 <FaGithub size={20} />
               </a>
             ) : null}
 
-            <a href={"mailto:" + siteConfig.email}>
+            <a href={"mailto:" + siteConfig.email} aria-label="Email">
               <FiMail size={20} />
             </a>
           </div>
         </div>
 
         <div className="hero-visual">
+          <div className="hero-orbit hero-orbit-one"></div>
+          <div className="hero-orbit hero-orbit-two"></div>
           <div className="code-panel">
             <div className="code-panel-header">
               <span className="dot dot-red"></span>
@@ -59,10 +62,10 @@ function Hero() {
               <div>const developer = {"{"}</div>
               <div>&nbsp;&nbsp;name: 'Hibba Hammad',</div>
               <div>&nbsp;&nbsp;role: 'Full-Stack Developer',</div>
-              <div>&nbsp;&nbsp;focus: 'AI & Automation',</div>
-              <div>&nbsp;&nbsp;stack: ['React', 'Node.js', 'MongoDB'],</div>
+              <div>&nbsp;&nbsp;focus: 'MERN Stack Development',</div>
+              <div>&nbsp;&nbsp;stack: ['React', 'Express', 'Node.js', 'MongoDB'],</div>
               <div>&nbsp;&nbsp;location: 'Lahore, PK',</div>
-              <div>&nbsp;&nbsp;available: true</div>
+              <div>&nbsp;&nbsp;available: <span className="tok-bool">true</span></div>
               <div>{"}"};</div>
             </div>
           </div>

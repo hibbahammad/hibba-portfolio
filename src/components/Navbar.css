@@ -2,23 +2,26 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  background: rgba(5, 11, 20, 0.82);
+  backdrop-filter: blur(14px);
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .navbar-scrolled {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom-color: var(--color-border);
+  background: rgba(5, 11, 20, 0.94);
   box-shadow: var(--shadow-sm);
 }
 
 .navbar-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(12px, 2vw, 28px);
   height: 76px;
-  transition: height 0.3s ease;
+  transition: height 0.25s ease;
 }
 
 .navbar-scrolled .navbar-inner {
@@ -26,58 +29,159 @@
 }
 
 .navbar-logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
+  min-width: 0;
+  flex-shrink: 0;
   color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.navbar-logo::before {
+  margin-right: 10px;
+  color: var(--color-primary);
+  content: "HH";
 }
 
 .navbar-links {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: clamp(10px, 1.8vw, 24px);
 }
 
 .navbar-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-ink-muted);
-  transition: color 0.2s ease;
   position: relative;
+  color: var(--color-ink-muted);
+  font-size: clamp(0.72rem, 0.8vw, 0.8rem);
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.navbar-links a:hover {
+.navbar-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  background: var(--color-primary);
+  content: "";
+  transition: transform 0.2s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--color-ink);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-socials {
+  display: flex;
+  gap: 14px;
+  color: var(--color-ink-muted);
+}
+
+.navbar-socials a {
+  display: inline-flex;
+  min-width: 36px;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-socials a:hover {
   color: var(--color-primary);
 }
 
 .navbar-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-solid);
   color: var(--color-ink);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .navbar-socials {
+    display: none;
+  }
+
   .navbar-toggle {
-    display: block;
+    display: inline-flex;
   }
 
   .navbar-links {
-    position: fixed;
-    top: 64px;
-    left: 0;
+    position: absolute;
+    top: 100%;
     right: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
     flex-direction: column;
-    background: #fff;
-    padding: 24px;
-    gap: 20px;
+    gap: 0;
+    max-height: calc(100vh - 76px);
+    padding: 8px clamp(16px, 6vw, 24px) 16px;
+    overflow-y: auto;
+    transform: translateY(-8px);
     border-bottom: 1px solid var(--color-border);
+    background: rgba(5, 11, 20, 0.98);
     box-shadow: var(--shadow-md);
-    transform: translateY(-150%);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+    visibility: hidden;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
   }
 
   .navbar-links-open {
     transform: translateY(0);
     opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .navbar-links a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 374px) {
+  .navbar-inner {
+    height: 68px;
+  }
+
+  .navbar-scrolled .navbar-inner {
+    height: 60px;
+  }
+
+  .navbar-links {
+    max-height: calc(100vh - 68px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar-inner,
+  .navbar-links {
+    transition: none;
   }
 }

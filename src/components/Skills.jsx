@@ -11,8 +11,8 @@ function Skills() {
         <span className="section-eyebrow">Skills</span>
         <h2 className="section-title">What I work with</h2>
         <p className="section-subtitle">
-          Tools and technologies I use across the frontend, backend, and
-          AI-driven parts of a project.
+          Technologies across frontend development, backend services, APIs,
+          databases, and application security.
         </p>
 
         <div

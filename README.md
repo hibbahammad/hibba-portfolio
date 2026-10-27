@@ -1,10 +1,10 @@
 # 👋 Hi, I'm Hibba Hammad
 
-### Frontend Developer | React | JavaScript | Full-Stack Development & AI Enthusiast
+### Full-Stack Developer | MERN Stack Developer
 
 I’m a Computer Science graduate focused on building modern, responsive, and user-friendly web experiences.
 
-I enjoy turning ideas into clean and functional interfaces while continuously improving my skills in React, JavaScript, full-stack development, and AI technologies.
+I enjoy turning ideas into clean and functional web experiences while continuing to grow my skills across React, JavaScript, Node.js, Express, MongoDB, and full-stack development.
 
 ---
 
@@ -87,7 +87,7 @@ Open the local URL provided by Vite.
 * Practice React and modern frontend development
 * Create responsive user interfaces
 * Showcase practical development projects
-* Build a foundation for full-stack development
+* Build practical experience with full-stack development
 
 ## 🔮 Future Improvements
 

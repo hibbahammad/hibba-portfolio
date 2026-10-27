@@ -9,20 +9,13 @@ const items = [
     status: "Completed",
     description: "Focused on modern web development and full-stack technologies.",
   },
-  {
-    provider: "ISDI",
-    title: "AI for Everyone",
-    status: "Ongoing",
-    description:
-      "Learning practical applications of AI, AI tools, prompt engineering, automation, and AI-assisted development workflows.",
-  },
 ];
 
 function Development() {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section className="section section-bg-alt">
+    <section id="development" className="section section-bg-alt">
       <div className="container">
         <span className="section-eyebrow">Professional Development</span>
         <h2 className="section-title">Continuous Learning</h2>
@@ -31,8 +24,9 @@ function Development() {
           ref={ref}
           className={`development-grid reveal ${isVisible ? "is-visible" : ""}`}
         >
-          {items.map((item) => (
-            <div className="development-card" key={item.provider}>
+          {items.map((item, index) => (
+          <div className="development-card" key={item.title}>
+            <div className="development-index">0{index + 1}</div>
               <div className="development-status">
                 {item.status === "Completed" ? (
                   <FiCheckCircle color="#2f9e5c" />

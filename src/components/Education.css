@@ -1,48 +1,68 @@
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 15px;
+  margin-top: 34px;
+}
+
 .education-card {
-  margin-top: 36px;
   display: flex;
-  gap: 22px;
   align-items: flex-start;
-  background: var(--color-surface);
+  gap: 16px;
+  min-width: 0;
+  padding: 22px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 30px;
-  max-width: 640px;
-  transition: box-shadow 0.25s ease;
+  background: var(--color-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .education-card:hover {
-  box-shadow: var(--shadow-md);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .education-icon {
-  width: 52px;
-  height: 52px;
-  flex-shrink: 0;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--radius-sm);
   background: var(--color-primary-soft);
   color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.education-year {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .education-card h3 {
-  font-size: 1.08rem;
-  margin-bottom: 6px;
+  margin-top: 9px;
+  font-size: 0.98rem;
+  overflow-wrap: anywhere;
 }
 
 .education-institute {
+  margin: 5px 0 8px;
   color: var(--color-ink-muted);
-  margin-bottom: 10px;
+  font-size: 0.83rem;
+  overflow-wrap: anywhere;
 }
 
-.education-meta {
-  display: flex;
-  gap: 8px;
+.education-detail {
+  color: var(--color-ink-muted);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--color-primary-dark);
+  font-size: 0.74rem;
 }
 
-.education-dot { color: var(--color-border); }
+@media (prefers-reduced-motion: reduce) {
+  .education-card {
+    transition: none;
+  }
+}
